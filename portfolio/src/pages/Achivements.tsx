@@ -1,7 +1,8 @@
-import {  Award, Medal, Target, Zap } from "lucide-react";
+import {  Award,  Target} from "lucide-react";
 import Hackelite from "../assets/hackElite.jpg";
 import algo from "../assets/algoXplore.jpg";
 import coderush from "../assets/codeRush.jpg";
+import volunteer from "../assets/volunteer.jpeg"
 
 const Achievements = () => (
   <section id="achievements" className="min-h-screen flex items-center justify-center">
@@ -47,42 +48,18 @@ const Achievements = () => (
           <p className="text-gray-400">Led team to victory in 48-hour hackathon developing innovative web application.</p>
         </div>
 
-        {/* Achievement 4 */}
-        <div className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-indigo-500 transition-all duration-300 hover:transform hover:scale-105 group">
-          <div className="flex items-center justify-center w-16 h-16 bg-orange-600 rounded-full mb-4 group-hover:bg-orange-500 transition-colors">
-            <Medal className="w-8 h-8 text-white" />
-          </div>
-          <h3 className="text-xl font-semibold text-white mb-2">GitHub Contributions</h3>
-          <p className="text-gray-300 text-sm mb-3">Open Source Projects</p>
-          <p className="text-gray-400">500+ contributions to open source projects with multiple merged pull requests.</p>
-        </div>
+       
 
-        {/* Achievement 5 */}
+        {/* Achievement 4 */}
         <div className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-indigo-500 transition-all duration-300 hover:transform hover:scale-105 group">
           <div className="flex items-center justify-center w-16 h-16 bg-red-600 rounded-full mb-4 group-hover:bg-red-500 transition-colors">
             <Target className="w-8 h-8 text-white" />
           </div>
-          <h3 className="text-xl font-semibold text-white mb-2">Project Excellence</h3>
-          <p className="text-gray-300 text-sm mb-3">Final Year Project</p>
-          <p className="text-gray-400">Received highest grade for innovative full-stack application with modern tech stack.</p>
+           <img src={volunteer} alt="volunteering" className="w-full h-48 object-cover rounded-lg mb-3" />
+          <h3 className="text-xl font-semibold text-white mb-2">Outstanding Volunteers of the IEEE WIE Student Branch Affinity Group of University of Moratuwa, for the month of May </h3>
+          
         </div>
 
-        {/* Achievement 6 */}
-        <div className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-indigo-500 transition-all duration-300 hover:transform hover:scale-105 group">
-          <div className="relative mb-4">
-            <img 
-              src="/path/to/aws-certification-photo.jpg" 
-              alt="AWS Certification Achievement" 
-              className="w-full h-48 object-cover rounded-lg mb-3"
-            />
-            <div className="absolute top-3 right-3 flex items-center justify-center w-12 h-12 bg-pink-600 rounded-full group-hover:bg-pink-500 transition-colors">
-              <Zap className="w-6 h-6 text-white" />
-            </div>
-          </div>
-          <h3 className="text-xl font-semibold text-white mb-2">Certification</h3>
-          <p className="text-gray-300 text-sm mb-3">AWS Cloud Practitioner</p>
-          <p className="text-gray-400">Successfully obtained AWS certification demonstrating cloud computing expertise.</p>
-        </div>
 
       </div>
 
