@@ -23,7 +23,7 @@ const Achievements = () => (
           <img src={Hackelite} alt="HackElite Achievement" className="w-full h-48 object-cover rounded-lg mb-3" />
           <h3 className="text-xl font-semibold text-white mb-2">HackElite Finalist</h3>
           <p className="text-gray-300 text-sm mb-3">Ideathon</p>
-          <p className="text-gray-400">Achieved outstanding academic performance with GPA above 3.7 for consecutive semesters.</p>
+          <p className="text-gray-400">Finalist at HackElite, a competitive hackathon that challenged us to develop innovative solutions under time constraints, showcasing problem-solving, teamwork, and technical skills.</p>
         </div>
 
         {/* Achievement 2 */}
@@ -63,25 +63,7 @@ const Achievements = () => (
 
       </div>
 
-      {/* Statistics Row */}
-      <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
-          <h4 className="text-3xl font-bold text-indigo-400 mb-2">15+</h4>
-          <p className="text-gray-300">Projects Completed</p>
-        </div>
-        <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
-          <h4 className="text-3xl font-bold text-purple-400 mb-2">3.8</h4>
-          <p className="text-gray-300">Current GPA</p>
-        </div>
-        <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
-          <h4 className="text-3xl font-bold text-green-400 mb-2">500+</h4>
-          <p className="text-gray-300">GitHub Commits</p>
-        </div>
-        <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
-          <h4 className="text-3xl font-bold text-orange-400 mb-2">5</h4>
-          <p className="text-gray-300">Awards Won</p>
-        </div>
-      </div>
+     
     </div>
   </section>
 );

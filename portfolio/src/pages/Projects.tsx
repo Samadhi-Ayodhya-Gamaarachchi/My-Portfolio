@@ -2,30 +2,42 @@ import React from 'react';
 import ProjectCard from '../components/ProjectCard';
 import { ExternalLink } from 'lucide-react';
 import type { Project } from '../Types';
+import spendsmartImg from '../assets/spendsmart.png';
+import HPImage from '../assets/HardwareProjectIamage.jpg'
+import PortfolioImage from '../assets/portfolio.png';
+import LassanaLanka from '../assets/lassnalanka.png';
 
 const Projects: React.FC = () => {
   const projects: Project[] = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include product management, shopping cart, and secure payment processing.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
+      title: 'Spend Smart',
+      description: 'SpendSmart is a financial management platform designed to help users track expenses, analyze spending patterns, and generate insightful reports. Built with React (TypeScript) and ASP.NET Core, it features interactive dashboards, charts, and export options (CSV/PDF) for better financial decision-making.',
+      tech: ['React', 'asp.net core', 'MSSQL'],
+      image: spendsmartImg,
       github: '#',
       live: '#'
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative project management tool built with Next.js and PostgreSQL. Includes real-time updates, team collaboration, and progress tracking.',
-      tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Socket.io'],
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
+      title: 'Personal Portfolio Website',
+      description: 'A personal portfolio website built with React and Tailwind CSS. Showcases projects, skills, and experience with a clean and modern design.',
+      tech: ['React', 'TypeScript', 'Tailwind CSS'],
+      image: PortfolioImage,
       github: '#',
       live: '#'
     },
     {
-      title: 'Weather Dashboard',
-      description: 'A responsive weather application with location-based forecasts, interactive maps, and weather alerts using modern APIs.',
-      tech: ['React', 'API Integration', 'Chart.js', 'Tailwind'],
-      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop',
+      title: 'Potato Sorting and Measuring Machine',
+      description: 'A machine learning project that automates the sorting and measuring of potatoes based on size and weight.',
+      tech: ['Arduino Mega 2560', 'ultrasonic sensor', 'wiper motor','load cell','stepper motor ',' TB6600 driver'],
+      image: HPImage,
+      github: '#',
+      live: '#'
+    },
+    {
+      title: 'Lassana Lanka',
+      description: 'Lassna Lanka is an IoT-powered Smart Garbage Management System that streamlines waste collection and provides real-time insights for cleaner, sustainable cities in Sri Lanka..',
+      tech: ['Figma'],
+      image: LassanaLanka,
       github: '#',
       live: '#'
     }
@@ -35,9 +47,9 @@ const Projects: React.FC = () => {
     <section id="projects" className="py-20 bg-transparent">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
+          <h2 className="text-4xl font-bold text-gray-200 mb-4">Featured Projects</h2>
           <div className="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-200 max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills and passion for development
           </p>
         </div>

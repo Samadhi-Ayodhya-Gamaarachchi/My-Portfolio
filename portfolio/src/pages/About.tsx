@@ -37,7 +37,7 @@ const About = () => (
                     <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
                       <h4 className="text-lg font-semibold text-white">BSc (Hons) Information Technology</h4>
                       <p className="text-indigo-400 font-medium">University of Moratuwa</p>
-                      <p className="text-gray-400 text-sm mt-1">2022 - Present</p>
+                      <p className="text-gray-400 text-sm mt-1">2023 - Present</p>
                       <p className="text-gray-300 text-sm mt-2">Specializing in Software Development and UI/UX Design</p>
                     </div>
                   </div>
