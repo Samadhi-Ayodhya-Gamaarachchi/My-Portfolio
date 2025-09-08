@@ -14,7 +14,7 @@ const Projects: React.FC = () => {
       description: 'SpendSmart is a financial management platform designed to help users track expenses, analyze spending patterns, and generate insightful reports. Built with React (TypeScript) and ASP.NET Core, it features interactive dashboards, charts, and export options (CSV/PDF) for better financial decision-making.',
       tech: ['React', 'asp.net core', 'MSSQL'],
       image: spendsmartImg,
-      github: '#',
+      github: 'https://github.com/behan02/Spend-Smart-frontend.git',
       live: '#'
     },
     {
@@ -22,7 +22,7 @@ const Projects: React.FC = () => {
       description: 'A personal portfolio website built with React and Tailwind CSS. Showcases projects, skills, and experience with a clean and modern design.',
       tech: ['React', 'TypeScript', 'Tailwind CSS'],
       image: PortfolioImage,
-      github: '#',
+      github: 'https://github.com/Samadhi-Ayodhya-Gamaarachchi/My-Portfolio.git',
       live: '#'
     },
     {
