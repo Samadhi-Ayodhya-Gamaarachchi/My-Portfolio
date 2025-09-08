@@ -5,8 +5,6 @@ It showcases my projects, skills, and achievements while providing a way to get 
 
 🚀 Tech Stack
 
-Frontend
-
 React
 
 TypeScript
@@ -15,22 +13,12 @@ Tailwind CSS
 
 Framer Motion (for animations)
 
-Backend
-
-.NET 8 Web API
-
-Entity Framework Core
-
-SQL Server
-
 📌 Features
 
 🎨 Modern, responsive design
 
-🌙 Dark/Light mode toggle
-
 📝 Projects showcase with GitHub/demo links
 
-⚡ Contact form (connected to .NET backend)
+⚡ Contact form 
 
 📄 Resume download option
