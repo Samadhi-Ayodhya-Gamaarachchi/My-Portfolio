@@ -1,11 +1,9 @@
-// components/Footer.tsx
 import React from 'react';
-import { Github, Linkedin } from 'lucide-react';
 import logoNav from '../assets/logoNav.png';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 text-white py-6">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center">
           <img src={logoNav} alt="Logo" className="mx-auto mb-4" />
