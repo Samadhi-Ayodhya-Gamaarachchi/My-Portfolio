@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
 import type { Project } from '../Types';
-import spendsmartImg from '../assets/spendsmart.png';
+import spendsmartImg from '../assets/SpendSmart.png';
 import HPImage from '../assets/HardwareProjectIamage.jpg'
 import PortfolioImage from '../assets/portfolio.png';
 import LassanaLanka from '../assets/lassnalanka.png'
