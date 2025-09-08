@@ -1,11 +1,11 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
-import { ExternalLink } from 'lucide-react';
 import type { Project } from '../Types';
 import spendsmartImg from '../assets/spendsmart.png';
 import HPImage from '../assets/HardwareProjectIamage.jpg'
 import PortfolioImage from '../assets/portfolio.png';
-import LassanaLanka from '../assets/lassnalanka.png';
+import LassanaLanka from '../assets/lassnalanka.png'
+import Entremate from '../assets/Entremate.png'
 
 const Projects: React.FC = () => {
   const projects: Project[] = [
@@ -30,7 +30,6 @@ const Projects: React.FC = () => {
       description: 'A machine learning project that automates the sorting and measuring of potatoes based on size and weight.',
       tech: ['Arduino Mega 2560', 'ultrasonic sensor', 'wiper motor','load cell','stepper motor ',' TB6600 driver'],
       image: HPImage,
-      github: '#',
       live: '#'
     },
     {
@@ -38,8 +37,15 @@ const Projects: React.FC = () => {
       description: 'Lassna Lanka is an IoT-powered Smart Garbage Management System that streamlines waste collection and provides real-time insights for cleaner, sustainable cities in Sri Lanka..',
       tech: ['Figma'],
       image: LassanaLanka,
-      github: '#',
-      live: '#'
+      live: 'https://www.behance.net/gallery/231517079/Lassana-Lanka'
+    },
+     {
+      title: 'Entremate',
+      description: 'EntreMate Lanka is a web platform that empowers social entrepreneurs with profiles, fundraising tools, and campaigns. I contributed to UX/UI design and feature development.',
+      tech: ['Figma'],
+      image: Entremate,
+      
+      live: 'https://www.figma.com/proto/BCIJ2U196Ep3jcHRhn6Rny/Entremate-lanka?page-id=0%3A1&node-id=166-480&p=f&viewport=-912%2C-928%2C0.23&t=jOFk39vmVjawXylW-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4%3A2'
     }
   ];
 
@@ -60,15 +66,7 @@ const Projects: React.FC = () => {
           ))}
         </div>
         
-        <div className="text-center mt-12">
-          <a 
-            href="#"
-            className="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transition-colors duration-300 font-medium"
-          >
-            View All Projects
-            <ExternalLink size={18} />
-          </a>
-        </div>
+       
       </div>
     </section>
   );

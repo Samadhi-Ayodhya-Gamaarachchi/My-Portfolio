@@ -45,7 +45,7 @@ const Achievements = () => (
           <img src={coderush} alt="codeRush Achievement" className="w-full h-48 object-cover rounded-lg mb-3" />
           <h3 className="text-xl font-semibold text-white mb-2">CodeRush 2024 7th place</h3>
           <p className="text-gray-300 text-sm mb-3">hackathon</p>
-          <p className="text-gray-400">Led team to victory in 48-hour hackathon developing innovative web application.</p>
+          <p className="text-gray-400">As part of Team CelestialHeroines, I won a Merit Award at CodeRush 2024, a hackathon organized by INTECS, Faculty of Information Technology, University of Moratuwa.</p>
         </div>
 
        
