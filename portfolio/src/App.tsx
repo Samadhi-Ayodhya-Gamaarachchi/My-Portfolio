@@ -7,6 +7,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import GalaxyBackground from "./components/GalaxyBackground";
 import Achivements from "./pages/Achivements";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <section id="projects"><Projects /></section>
         <section id="contact"><Contact /></section>
       </main>
+      <Footer/>
     </div>
   );
 }
