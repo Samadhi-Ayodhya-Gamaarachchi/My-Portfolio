@@ -1,10 +1,17 @@
-import{ useState } from 'react';
+import { useState } from 'react';
 import { Code, Database, Globe, Cpu } from 'lucide-react';
 
-const Skills = () => {
-  const [activeTab, setActiveTab] = useState('frontend');
+type TabKey = 'frontend' | 'backend' | 'database' | 'languages';
 
-  const tabData = {
+interface Skill {
+  name: string;
+  color: string;
+}
+
+const Skills = () => {
+  const [activeTab, setActiveTab] = useState<TabKey>('frontend');
+
+  const tabData: Record<TabKey, { title: string; icon: React.ReactElement; skills: Skill[] }> = {
     frontend: {
       title: 'Frontend',
       icon: <Globe className="w-5 h-5" />,
@@ -51,7 +58,7 @@ const Skills = () => {
     }
   };
 
-  const tabs = ['frontend', 'backend', 'database', 'languages'];
+  const tabs: TabKey[] = ['frontend', 'backend', 'database', 'languages'];
 
   return (
     <section id="skills" className="min-h-screen flex items-center justify-center py-20">
@@ -86,7 +93,7 @@ const Skills = () => {
           </h3>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {tabData[activeTab].skills.map((skill, index) => (
+            {tabData[activeTab].skills.map((skill) => (
               <div 
                 key={skill.name} 
                 className="bg-gray-700 rounded-lg p-4 text-center border border-gray-600 hover:border-indigo-500 transition-all duration-300 hover:transform hover:scale-105"
