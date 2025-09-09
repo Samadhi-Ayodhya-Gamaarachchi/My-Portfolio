@@ -1,6 +1,7 @@
 import React from "react";
 import { ChevronDown } from "lucide-react";
 import homeImage from "../assets/homeImage.png";
+import resume from "../assets/CV/resume.pdf"
 
 const Hero: React.FC = () => {
   return (
@@ -24,7 +25,7 @@ const Hero: React.FC = () => {
             
             <div className="flex flex-wrap justify-center md:justify-center gap-4 mb-12">
               <a
-                href="/resume.pdf"
+                href={resume}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transition-colors duration-300 font-medium"
