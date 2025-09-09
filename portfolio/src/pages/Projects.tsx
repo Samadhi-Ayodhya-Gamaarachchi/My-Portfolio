@@ -15,7 +15,7 @@ const Projects: React.FC = () => {
       tech: ['React', 'asp.net core', 'MSSQL'],
       image: spendsmartImg,
       github: 'https://github.com/behan02/Spend-Smart-frontend.git',
-      live: '#'
+      
     },
     {
       title: 'Personal Portfolio Website',
@@ -23,14 +23,14 @@ const Projects: React.FC = () => {
       tech: ['React', 'TypeScript', 'Tailwind CSS'],
       image: PortfolioImage,
       github: 'https://github.com/Samadhi-Ayodhya-Gamaarachchi/My-Portfolio.git',
-      live: '#'
+      live: 'https://my-portfolio-2-chi-nine.vercel.app/'
     },
     {
       title: 'Potato Sorting and Measuring Machine',
       description: 'A machine learning project that automates the sorting and measuring of potatoes based on size and weight.',
       tech: ['Arduino Mega 2560', 'ultrasonic sensor', 'wiper motor','load cell','stepper motor ',' TB6600 driver'],
       image: HPImage,
-      live: '#'
+      live: 'https://www.linkedin.com/posts/samadhi-gamaarachchi-721073287_hardwareproject-arduino-automation-activity-7237505732269502464-66ot?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEWZP0kBN9rwBOs6ElIG0YPPdg_FV4IO1jA'
     },
     {
       title: 'Lassana Lanka',
@@ -40,7 +40,7 @@ const Projects: React.FC = () => {
       live: 'https://www.behance.net/gallery/231517079/Lassana-Lanka'
     },
      {
-      title: 'Entremate',
+      title: 'Entremate Lanka',
       description: 'EntreMate Lanka is a web platform that empowers social entrepreneurs with profiles, fundraising tools, and campaigns. I contributed to UX/UI design and feature development.',
       tech: ['Figma'],
       image: Entremate,
