@@ -16,11 +16,27 @@ const ContactForm: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.MouseEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
+const handleSubmit = async (e: React.MouseEvent) => {
+  e.preventDefault();
+  try {
+    const response = await fetch("http://localhost:5000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+    console.log(result);
+
+    alert(result.msg); // show success message
+    setFormData({ name: "", email: "", subject: "", message: "" });
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    alert("Something went wrong!");
+  }
+};
 
   return (
     <div className="bg-white p-8 rounded-xl shadow-lg">
