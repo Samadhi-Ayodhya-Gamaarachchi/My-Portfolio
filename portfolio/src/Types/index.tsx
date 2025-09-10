@@ -16,6 +16,6 @@ export interface Skill {
 export interface ContactFormData {
   name: string;
   email: string;
-  subject: string;
+  title: string;
   message: string;
 }

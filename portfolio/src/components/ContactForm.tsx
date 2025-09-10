@@ -1,45 +1,58 @@
-import React, { useState } from 'react';
-import type { ContactFormData } from '../Types/index.ts';
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
+import type { ContactFormData } from "../Types/index.ts";
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    title: "",   // ✅ must match EmailJS variable
+    message: "",
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
-const handleSubmit = async (e: React.MouseEvent) => {
-  e.preventDefault();
-  try {
-    const response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
 
-    const result = await response.json();
-    console.log(result);
+    // Create a properly typed object for EmailJS
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.title,
+      message: formData.message,
+      to_name: "Samadhi", // Your name
+    };
 
-    alert(result.msg); // show success message
-    setFormData({ name: "", email: "", subject: "", message: "" });
-  } catch (error) {
-    console.error("Error submitting form:", error);
-    alert("Something went wrong!");
-  }
-};
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,   // ✅ from .env
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,  // ✅ from .env
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY    // ✅ from .env
+      )
+      .then(
+        (response) => {
+          console.log("EmailJS Response:", response);
+          alert("✅ Message sent successfully!");
+          setFormData({ name: "", email: "", title: "", message: "" });
+        },
+        (error) => {
+          console.error("EmailJS Error:", error);
+          alert(`❌ Failed to send message. Error: ${error.text || error.message || 'Unknown error'}`);
+        }
+      );
+  };
 
   return (
-    <div className="bg-white p-8 rounded-xl shadow-lg">
+    <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-lg">
       <div className="grid md:grid-cols-2 gap-6 mb-6">
         <div>
           <label className="block text-gray-700 font-medium mb-2">Name</label>
@@ -48,7 +61,8 @@ const handleSubmit = async (e: React.MouseEvent) => {
             name="name"
             value={formData.name}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
+            required
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
             placeholder="Your name"
           />
         </div>
@@ -59,43 +73,47 @@ const handleSubmit = async (e: React.MouseEvent) => {
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
+            required
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
             placeholder="your.email@example.com"
           />
         </div>
       </div>
-      
+
       <div className="mb-6">
         <label className="block text-gray-700 font-medium mb-2">Subject</label>
         <input
           type="text"
-          name="subject"
-          value={formData.subject}
+          name="title"   // ✅ changed from "subject" to "title"
+          value={formData.title}
           onChange={handleInputChange}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
+          required
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
           placeholder="What's this about?"
         />
       </div>
-      
+
       <div className="mb-6">
         <label className="block text-gray-700 font-medium mb-2">Message</label>
         <textarea
           name="message"
           value={formData.message}
           onChange={handleInputChange}
+          required
           rows={5}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200 resize-none"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 resize-none"
           placeholder="Tell me about your project..."
         ></textarea>
       </div>
-      
+
       <button
-        onClick={handleSubmit}
+        type="submit"
         className="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition-colors duration-300 font-medium"
       >
         Send Message
       </button>
-    </div>
+    </form>
   );
 };
+
 export default ContactForm;
