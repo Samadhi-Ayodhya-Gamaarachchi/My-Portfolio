@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
           </div>
                    
           {/* Right Image Section */}
-          <div className="order-1 md:order-2 flex justify-center mt-10 md:mt-0">
+          <div className="order-1 md:order-2 flex justify-center mt-20 md:mt-0">
             <img
               src={homeImage}
               alt="Samadhi Gamaarachchi - Portfolio Profile"
